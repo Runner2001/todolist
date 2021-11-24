@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+$Bright-Blue: hsl(220, 98%, 61%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+$Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+$Light-gry-blue: hsl(233, 11%, 84%);
+$Dark-Grayish-Blue: hsl(236, 9%, 61%);
+$Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+$Very-Dark-Blue: hsl(235, 21%, 11%);
+$Very-Dark-Desaturated: hsl(235, 24%, 19%);
+$Ligh-Grayish-Blue: hsl(234, 39%, 85%);
+$Ligh-Grayish-Blue: hsl(236, 33%, 92%);
+$Dark-Grayish-Blue: hsl(234, 11%, 52%);
+$Very-Dark-Grayish: hsl(233, 14%, 35%);
+$Very-Dark-Grayish: hsl(237, 14%, 26%);
+
+.text {
+  color: $Dark-Grayish-Blue;
+}
+.background {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+}
+.submit {
+  visibility: hidden;
+  display: none;
+}
+.main {
+  height: 100vh;
+  background: $Very-Dark-Blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main2 {
+  width: 40vw;
+  z-index: 10;
+  .header {
+    h2 {
+      letter-spacing: 10px;
+      color: white;
+    }
+    display: flex;
+    justify-content: space-between;
+  }
+  form {
+    input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      outline: none;
+      color: white;
+      background: $Very-Dark-Grayish;
+    }
+  }
+}
+.list {
+  color: white;
+  background: $Very-Dark-Grayish;
+  // padding: 10px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid $Very-Dark-Desaturated;
+  }
+}
+.complete {
+  text-decoration: line-through;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $Very-Dark-Desaturated;
+
+  h6 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  h6:hover {
+    color: $Ligh-Grayish-Blue;
+  }
+  .contact {
+    display: flex;
+    .active {
+      color: $Bright-Blue;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main2 {
+    width: 60vw;
+    .list {
+      div {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .main2 {
+    width: 90vw;
+    .list {
+      div {
+        justify-content: space-between;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+
+    h6 {
+      margin: 10px 0;
+    }
+  }
+}
